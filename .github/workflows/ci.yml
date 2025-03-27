@@ -31,7 +31,7 @@ jobs:
           sleep 5  # Give time for the API to start
 
       - name: Run Smoke Test
-        run: chmod +x smoke-test.sh && ./smoke-test.sh
+        run: bash testing/smoke-test.sh
 
   deploy:
     needs: test  # Only deploy if tests pass
